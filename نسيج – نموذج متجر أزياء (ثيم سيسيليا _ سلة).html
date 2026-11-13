@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نسيج | متجر أزياء – نموذج ثيم سيسيليا على سلة</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1eef3;--surface:#fff;--ink:#221b2b;--muted:#6d6577;--plum:#5a2d4f;--on-plum:#fff;--sand:#cbb8a5;--line:#ded8e3;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17121c;--surface:#201a27;--ink:#f1eef3;--muted:#a79fb2;--plum:#c98bb8;--on-plum:#17121c;--line:#352d3f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17121c;--surface:#201a27;--ink:#f1eef3;--muted:#a79fb2;--plum:#c98bb8;--on-plum:#17121c;--line:#352d3f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 "IBM Plex Sans Arabic",Tahoma,sans-serif}
+h1,h2,h3,.logo{font-family:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;font-weight:700;line-height:1.25}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--plum);outline-offset:2px}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+.note{background:var(--plum);color:var(--on-plum);text-align:center;font-size:14px;padding:6px 12px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-size:28px;color:var(--plum)}
+nav{display:flex;gap:24px;font-weight:500}nav a:hover,nav a.on{color:var(--plum)}
+.tools{display:flex;gap:8px}
+.ib{border:1px solid var(--line);background:var(--surface);border-radius:50%;width:42px;height:42px;display:grid;place-items:center;position:relative}
+.cnt{position:absolute;top:-4px;inset-inline-start:-4px;background:var(--plum);color:var(--on-plum);border-radius:10px;font-size:12px;min-width:20px;height:20px;line-height:20px;text-align:center}
+@media(max-width:700px){nav{display:none}}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;padding:48px 0}
+.hero h1{font-size:clamp(40px,7vw,76px);margin-bottom:16px}
+.hero p{color:var(--muted);max-width:44ch;margin-bottom:28px}
+.btn{display:inline-block;background:var(--plum);color:var(--on-plum);border:0;border-radius:999px;padding:12px 28px;font-weight:600;transition:transform .15s}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-inline-start:8px}
+.stage{position:relative;aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:var(--sand);display:grid;place-items:center;overflow:hidden;transition:background .4s}
+.stage svg{width:62%;fill:var(--g,#5a2d4f);filter:drop-shadow(0 18px 20px rgba(0,0,0,.22));transition:fill .4s}
+.sw{position:absolute;bottom:18px;display:flex;gap:10px;background:var(--surface);padding:8px 12px;border-radius:999px}
+.dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--surface);outline:1px solid var(--line);padding:0}
+.dot[aria-pressed=true]{outline:2px solid var(--ink)}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:24px}}
+/* sections */
+section{padding:40px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.sh h2{font-size:30px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center;font-weight:600;transition:border-color .2s}
+.cat:hover{border-color:var(--plum)}
+@media(max-width:700px){.cats{grid-template-columns:repeat(2,1fr)}}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+.card{display:block}
+.img{position:relative;aspect-ratio:3/4;border-radius:12px;background:var(--t,#e8e0ea);display:grid;place-items:center;overflow:hidden}
+.img svg{width:52%;fill:var(--c);transition:transform .3s}
+.card:hover .img svg{transform:scale(1.06)}
+.tag{position:absolute;top:10px;inset-inline-end:10px;background:var(--ink);color:var(--bg);font-size:12px;padding:2px 10px;border-radius:999px}
+.card h3{font-family:inherit;font-size:16px;font-weight:600;margin-top:10px}
+.price{color:var(--muted)}.price s{margin-inline-start:6px;font-size:14px}.price b{color:var(--plum)}
+.band{background:var(--plum);color:var(--on-plum);border-radius:18px;padding:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.band strong{display:block;font-size:20px}
+@media(max-width:700px){.band{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 90px;color:var(--muted);text-align:center;font-size:14px}
+footer b{color:var(--ink)}
+/* product */
+.crumb{color:var(--muted);font-size:14px;padding:18px 0 0}
+.pd{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;padding:20px 0 40px}
+.thumbs{display:flex;gap:10px;margin-top:10px}.th{flex:1;aspect-ratio:1;border-radius:10px;background:var(--sand);border:2px solid transparent;display:grid;place-items:center;padding:0}
+.th[aria-pressed=true]{border-color:var(--plum)}.th svg{width:46%;fill:var(--g)}
+.pd h1{font-size:34px;margin-bottom:6px}
+.pr{font-size:26px;font-weight:600;color:var(--plum);margin:8px 0 16px}.pr s{color:var(--muted);font-size:18px;font-weight:400;margin-inline-start:8px}
+.lbl{font-weight:600;margin:18px 0 8px;display:flex;justify-content:space-between}
+.lbl button{background:none;border:0;color:var(--plum);text-decoration:underline;font-size:14px}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.sz{min-width:52px;height:46px;border:1px solid var(--line);background:var(--surface);border-radius:10px}
+.sz[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sz:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.buy{display:flex;gap:10px;margin-top:22px}.buy .btn{flex:1;border-radius:12px;padding:14px}
+.qty{display:flex;border:1px solid var(--line);border-radius:12px;background:var(--surface);align-items:center}
+.qty button{width:40px;height:100%;background:none;border:0;font-size:20px}.qty span{min-width:24px;text-align:center}
+.perks{display:flex;gap:18px;color:var(--muted);font-size:14px;margin-top:16px;flex-wrap:wrap}
+details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin-top:8px}
+.msg{color:#b3261e;font-size:14px;min-height:22px;margin-top:8px}
+dialog{border:0;border-radius:16px;background:var(--surface);color:var(--ink);padding:24px;max-width:460px;width:92%}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+table{width:100%;border-collapse:collapse;margin:12px 0;text-align:center}th,td{padding:8px;border-bottom:1px solid var(--line)}
+.toast{position:fixed;inset-inline:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:360px;margin:auto;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;transform:translateY(140%);transition:transform .3s;z-index:20;text-align:center}
+.toast.show{transform:none}
+@media(max-width:800px){.pd{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="note">نموذج عمل مقترح لمتجر أزياء على سلة – ثيم سيسيليا | شحن مجاني فوق 300 ر.س</div>
+<header><div class="wrap bar">
+<a class="logo" href="#home">نسيج</a>
+<nav><a href="#home" id="n1">الرئيسية</a><a href="#product" id="n2">فساتين</a><a href="#home">عبايات</a><a href="#home">التخفيضات</a></nav>
+<div class="tools">
+<button class="ib" id="theme" aria-label="تبديل الوضع الليلي">◐</button>
+<button class="ib" aria-label="السلة">🛍<span class="cnt" id="cnt">0</span></button>
+</div></div></header>
+
+<main id="home" class="wrap">
+<div class="hero">
+<div><h1>أناقة تُرتدى<br>بكل ألوانها</h1>
+<p>تشكيلة الموسم الجديد من الفساتين والعبايات بخامات مريحة وقصّات تناسب يومك. اختاري اللون وشاهدي القطعة تتغير.</p>
+<a class="btn" href="#product">تسوّقي الآن</a><a class="btn ghost" href="#new">وصل حديثاً</a></div>
+<div class="stage" id="hs"><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M38 8l-8 20 6 12-14 80h56L64 40l6-12-8-20-12 10z"/></svg>
+<div class="sw" id="hsw" role="group" aria-label="لون القطعة"></div></div>
+</div>
+<section><div class="sh"><h2>تسوّقي حسب الفئة</h2></div>
+<div class="cats"><a class="cat" href="#product">فساتين سهرة</a><a class="cat" href="#product">عبايات</a><a class="cat" href="#product">إطلالات يومية</a><a class="cat" href="#product">إكسسوارات</a></div></section>
+<section id="new"><div class="sh"><h2>وصل حديثاً</h2><a href="#product" class="price">عرض الكل</a></div>
+<div class="grid" id="grid"></div></section>
+<section><div class="band"><div><strong>شحن سريع</strong>خلال 2–4 أيام عمل</div><div><strong>استبدال سهل</strong>خلال 14 يوماً</div><div><strong>دفع آمن</strong>مدى، أبل باي، تمارا</div></div></section>
+</main>
+
+<main id="product" class="wrap" hidden>
+<div class="crumb"><a href="#home">الرئيسية</a> / فساتين / فستان لينا الكتّاني</div>
+<div class="pd">
+<div><div class="stage" id="ps" style="border-radius:16px"><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M38 8l-8 20 6 12-14 80h56L64 40l6-12-8-20-12 10z"/></svg></div>
+<div class="thumbs" id="th"></div></div>
+<div>
+<h1>فستان لينا الكتّاني</h1>
+<div class="price">★★★★★ 4.8 (126 تقييم)</div>
+<div class="pr">249 ر.س <s>329 ر.س</s></div>
+<p style="color:var(--muted)">فستان طويل بقماش كتان ناعم وحزام قابل للتعديل، مناسب للمناسبات والخروجات اليومية.</p>
+<div class="lbl"><span>اللون: <span id="cn"></span></span></div>
+<div class="sw" style="position:static;background:none;padding:0" id="psw" role="group" aria-label="اللون"></div>
+<div class="lbl"><span>المقاس</span><button id="guide">دليل المقاسات</button></div>
+<div class="sizes" id="sizes"></div>
+<div class="msg" id="msg" role="alert"></div>
+<div class="buy"><div class="qty"><button id="mi" aria-label="إنقاص">−</button><span id="q">1</span><button id="pl" aria-label="زيادة">+</button></div>
+<button class="btn" id="add">أضيفي إلى السلة</button></div>
+<div class="perks"><span>🚚 شحن خلال 2–4 أيام</span><span>↺ استبدال خلال 14 يوماً</span></div>
+<div style="margin-top:20px"><details open><summary>الوصف</summary><p>كتان مخلوط 70%، بطانة قطنية، طول 140 سم.</p></details><details><summary>العناية بالقطعة</summary><p>غسيل لطيف على 30 درجة، لا تُستخدم المبيّضات، تُكوى على حرارة متوسطة.</p></details><details><summary>الشحن والاستبدال</summary><p>استبدال مجاني للمقاس خلال 14 يوماً من الاستلام.</p></details></div>
+</div></div>
+<section><div class="sh"><h2>قد يعجبك أيضاً</h2></div><div class="grid" id="grid2"></div></section>
+</main>
+
+<footer><div class="wrap">© 2026 نسيج – تصميم وتطوير <b>Mohannad Nader</b><br>نموذج تجريبي لتعديلات الصفحة الرئيسية وصفحة المنتج وتحسين تجربة المستخدم</div></footer>
+
+<dialog id="dlg"><h3>دليل المقاسات (سم)</h3>
+<table><tr><th>المقاس</th><th>الصدر</th><th>الخصر</th><th>الورك</th></tr><tr><td>S</td><td>88</td><td>70</td><td>94</td></tr><tr><td>M</td><td>94</td><td>76</td><td>100</td></tr><tr><td>L</td><td>100</td><td>82</td><td>106</td></tr><tr><td>XL</td><td>108</td><td>90</td><td>114</td></tr></table>
+<form method="dialog"><button class="btn">إغلاق</button></form></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+var cols=[["عنابي","#5a2d4f"],["زيتي","#4d5a3a"],["نيلي","#26355d"],["رملي","#b08968"]];
+var prods=[["فستان لينا الكتّاني","249 ر.س","329 ر.س","خصم 24%",0],["عباءة ريم الكريب","399 ر.س","","جديد",2],["فستان جود الساتان","289 ر.س","","",1],["طقم سلمى الصيفي","219 ر.س","279 ر.س","خصم 22%",3]];
+var svg='<svg viewBox="0 0 100 130" aria-hidden="true"><path d="M38 8l-8 20 6 12-14 80h56L64 40l6-12-8-20-12 10z"/></svg>';
+var cur=0,size=null,qty=1,count=0;
+function $(i){return document.getElementById(i)}
+function cards(id){$(id).innerHTML=prods.map(function(p){return '<a class="card" href="#product"><div class="img">'+(p[3]?'<span class="tag">'+p[3]+'</span>':'')+svg.replace('<svg','<svg style="--c:'+cols[p[4]][1]+'"')+'</div><h3>'+p[0]+'</h3><div class="price"><b>'+p[1]+'</b>'+(p[2]?'<s>'+p[2]+'</s>':'')+'</div></a>'}).join('')}
+function dots(id){$(id).innerHTML=cols.map(function(c,i){return '<button class="dot" style="background:'+c[1]+'" aria-label="'+c[0]+'" aria-pressed="'+(i==cur)+'" data-i="'+i+'"></button>'}).join('')}
+function paint(){
+ var g=cols[cur][1];
+ [$('hs'),$('ps')].forEach(function(s){s.style.setProperty('--g',g)});
+ $('cn').textContent=cols[cur][0];dots('hsw');dots('psw');
+ $('th').innerHTML=[0,1,2].map(function(i){return '<button class="th" aria-label="صورة '+(i+1)+'" aria-pressed="'+(i==0)+'" style="--g:'+g+';opacity:'+(1-i*.2)+'">'+svg+'</button>'}).join('');
+}
+document.addEventListener('click',function(e){var d=e.target.closest('.dot');if(d){cur=+d.dataset.i;paint()}});
+var S=["S","M","L","XL"],out=["XL"];
+$('sizes').innerHTML=S.map(function(s){return '<button class="sz" data-s="'+s+'" aria-pressed="false"'+(out.indexOf(s)>-1?' disabled title="غير متوفر"':'')+'>'+s+'</button>'}).join('');
+$('sizes').onclick=function(e){var b=e.target.closest('.sz');if(!b||b.disabled)return;size=b.dataset.s;[].forEach.call(this.children,function(x){x.setAttribute('aria-pressed',x==b)});$('msg').textContent=''};
+$('pl').onclick=function(){qty=Math.min(qty+1,9);$('q').textContent=qty};
+$('mi').onclick=function(){qty=Math.max(qty-1,1);$('q').textContent=qty};
+$('guide').onclick=function(){$('dlg').showModal()};
+function toast(t){var x=$('toast');x.textContent=t;x.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(function(){x.classList.remove('show')},2200)}
+$('add').onclick=function(){
+ if(!size){$('msg').textContent='اختاري المقاس أولاً لإضافة القطعة إلى السلة.';return}
+ count+=qty;$('cnt').textContent=count;toast('أُضيفت إلى السلة: '+cols[cur][0]+'، مقاس '+size)};
+$('theme').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=d?'light':'dark'};
+function route(){var p=location.hash=='#product';$('home').hidden=p;$('product').hidden=!p;$('n1').className=p?'':'on';$('n2').className=p?'on':'';scrollTo(0,0)}
+addEventListener('hashchange',route);
+cards('grid');cards('grid2');paint();route();
+</script>
+</body>
+</html>
